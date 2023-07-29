@@ -1,0 +1,322 @@
+/* Reset default margin and padding */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Make the app container fill the entire viewport */
+html,
+body,
+#root {
+  height: 100%;
+}
+
+/* Set a base font size for the app */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+
+/* Main app container as a flex container */
+.container {
+  display: flex;
+  height: 100%;
+}
+
+/* Navigation Sidebar */
+.sidebar {
+  min-width: 150px; /* Set a minimum width for the sidebar */
+  background-color: #f0f0f0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  display: block;
+}
+
+.sidebar a:hover {
+  color: #000;
+  font-weight: bold;
+  background-color: #ddd;
+}
+
+/* Style the Logout button */
+.sidebar button {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: none;
+  outline: none;
+  color: #333;
+}
+
+.sidebar button:hover {
+  font-weight: bold;
+  background-color: #ddd;
+}
+
+/* Main Content Area */
+.switch-container {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.sidebar a.logout-link {
+  padding: 10px;
+  display: block;
+  cursor: pointer;
+}
+
+.active-link {
+  font-weight: bold;
+  background-color: #ddd;
+}
+
+/* Add spacing and borders to the table */
+table {
+  border-collapse: collapse; /* Merge table borders */
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ddd; /* Add borders around table cells */
+}
+
+/* Apply alternating row colors */
+tr:nth-child(even) {
+  background-color: #f2f2f2; /* Light gray background for even rows */
+}
+
+/* Apply styles to the table header */
+th {
+  background-color: #f0f0f0; /* Lighter gray background for table header */
+  text-align: left;
+}
+
+/* Add some spacing between the table header and the first row */
+tbody tr:first-child {
+  margin-top: 10px;
+}
+
+/* Increase the size of the "Add Score" button */
+button {
+  padding: 10px 16px; /* Adjust padding to increase button size */
+  font-size: 14px; /* Adjust font size to increase button text size */
+}
+
+/* Add styles for clickable usernames */
+ul.usernames-list {
+  display: flex; /* Use flexbox to display items horizontally */
+  list-style-type: none;
+  padding: 0;
+}
+
+li.username-item {
+  cursor: pointer;
+  color: #007bff;
+  margin-right: 10px; /* Add some spacing between the usernames */
+}
+
+li.username-item:hover {
+  text-decoration: underline;
+}
+
+
+.login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  
+}
+
+.login-page h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+.success-message {
+  color: green;
+  font-weight: bold;
+}
+
+/* Position the golf emoji in the top right corner */
+.golf-logo {
+  position: absolute;
+  top: 7px; /* Adjust the top position as needed */
+  right: 20px; /* Adjust the right position as needed */
+  font-size: 40px; /* Adjust the font size to resize the emoji */
+}
+
+/* body {
+  background-image: linear-gradient(to bottom, #ff51b1, #70dbff);
+} */
+
+.main-content {
+  padding: 10px; /* Add your desired padding value here */
+}
+
+table {
+  border-collapse: collapse; /* Merge table borders */
+  width: 100%;
+  margin-bottom: 20px;
+   /* Prevent the table from stretching to fit content */
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ddd; /* Add borders around table cells */
+  font-size: 14px;
+  
+}
+
+.desktop-only {
+  display: table-cell;
+}
+
+/* Show only on mobile devices (hide on desktop) */
+.mobile-only {
+  display: none;
+}
+
+
+
+/* Media query for smaller devices (mobile phones, etc) */
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column; /* Change the layout to stack elements vertically */
+  }
+
+  .mobile-nav-icon {
+    /* Styles for the mobile navigation icon */
+    display: block;
+    font-size: 24px;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+  
+  .switch-container {
+    padding: 10px; /* Adjust padding for better spacing */
+  }
+
+  /* Center the login page */
+  .login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -70px; 
+  }
+  .form-group {
+    width: 100%;
+    max-width: 300px; /* Set a maximum width for better readability and centering */
+  }
+
+  /* Center the input fields */
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  .desktop-only {
+    display: none;
+  }
+
+  /* Show elements that should be shown only in mobile view */
+  .mobile-only {
+    display: block;
+  }
+  table {
+    font-size: 6px;
+  }
+
+  /* Decrease padding for better fit */
+  th,
+  td {
+    padding: 4px;
+  }
+
+  table {
+    max-width: 100%; /* Set the maximum width to the full screen width */
+    table-layout: fixed; /* Prevent table from expanding beyond the specified width */
+    word-wrap: break-word;
+  }
+  th.desktop-only {
+    display: none;
+  }
+
+  /* Show mobile column headers */
+  th.mobile-only {
+    display: table-cell;
+  }
+
+}
+
