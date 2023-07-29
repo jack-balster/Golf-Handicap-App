@@ -10,11 +10,10 @@ import path from 'path';
 const app = express();
 app.use(express.json());
 app.use(cors());
-const JWT_SECRET = 'imsojackSecretKey';
+const JWT_SECRET = 'my seceret key var';
 
 // Define MongoDB connection URI
-// 'mongodb://localhost:27017/golf-app'  'mongodb://mongo:27017/golf-app'
-const MONGODB_URI = 'mongodb://172.179.8.99:27017/golf-app'; 
+const MONGODB_URI = 'my connection string var'; 
 
 // Connect to MongoDB using Mongoose
 mongoose.connect(MONGODB_URI, {
